@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>  
+<style type="text/css">
+/* .slide-enter-active, .slide-leave-active {
+  transition: transform .5s
+}
+.slide-enter {
+  transform: translateX(300px)
+}
+.slide-leave-active {
+  transform: translateX(-300px);
+}
+
+p {
+  position: absolute;
+  margin: 0;
+  font-size: 3em;
+} */
+</style>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="product--">前</button>
+    <button @click="product++">次</button>
+  <transition name="slide">
+    <p :key="products[product%5]">{{products[product%5]}}</p>
+  </transition>
+</div>
+  <script>
+new Vue({
+    el: '#app',
+  data: {
+    product: 0,
+    products: ['😀','😂','😎','😼','👷']
+  }
+})
+</script>
+</body>
+</html>

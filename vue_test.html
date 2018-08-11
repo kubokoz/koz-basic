@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+
+</head>
+<body>
+    <div id="example">
+        <p>{{ name }} は {{ price }}円</p>
+        <textarea></textarea>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#example',
+            data: {
+                name: 'みかん',
+                price: 100
+            }
+        });
+    
+        window.vm = vm;
+    </script>
+</body>
+</html>
